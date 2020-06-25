@@ -13,7 +13,7 @@ export default class Content{
   linkContent: string
 
   // // 1 migração
-  @OneToOne(type => Lesson, content => Content)
+  @OneToOne(type => Lesson, content => Content, {eager: true})
   @JoinColumn()
   lesson: Lesson 
  

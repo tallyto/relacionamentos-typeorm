@@ -13,7 +13,7 @@ export default class Student{
   @Column()
   key: string
   
-  @ManyToMany(type=> Class)
+  @ManyToMany(type=> Class, {eager: true})
   @JoinTable()
   classe: Class
  
